@@ -22,12 +22,12 @@ class Critter():
             mood = "Грустно"
         else:
             mood = 'Мне нужны внимание и забота'
-        return str(mood)
+        return mood
     def talk(self):
         print('Меня зовут '+ self.name)
         print('Сейчас я ' + self.hunger)
         print(self.boredom + ' - моё состояние')
-        print("Настроение - ", self.mood)
+        print("Настроение - ", end = '')
 
 
 
@@ -35,4 +35,5 @@ class Critter():
 
 crit1 = Critter()
 
-crit1.talk()        
+crit1.talk()
+print(crit1.mood(mood= ""))
