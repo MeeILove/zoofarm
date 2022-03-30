@@ -85,22 +85,24 @@ print(crit.mood(mood= ""))
 choice = None
 while choice != 0:
     print \
-        ('''
+    ('''
         Моё животное 
         0 - выйти
         1 - узнать о самочувствии животного
         2 - покормить животное
         3 - поиграть с животным 
-        ''')
-choice = input('Ваш выбор: ')
-print()
-if choice == '0':
-    print('До свидания!')
-elif choice == '1':
-    crit.talk()
-elif choice == '2':
-    crit.eat()
-elif choice == '3':
-    crit.play()
-else:
-    print('\nИзвините, неверная команда', choice)
+    ''')
+    choice = input('Ваш выбор: ')
+#choice = input('Ваш выбор: ')
+    print()
+    if choice == '0':
+        print('До свидания!')
+        break
+    elif choice == '1':
+        crit.talk()
+    elif choice == '2':
+        crit.eat(food= 1)
+    elif choice == '3':
+        crit.play(game= 1)
+    else:
+        print('\nИзвините, неверная команда', choice)
